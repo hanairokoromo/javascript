@@ -1,9 +1,6 @@
 @charset "utf-8";
 
-#box1{
-    position: relative;
-    left: 0px;
-    width: 100px;
-    height: 100px;
-    background-color: red;
+#sample-slideshow .photo img{
+    display: none;
+    position: absolute;
 }
