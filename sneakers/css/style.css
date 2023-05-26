@@ -6,7 +6,7 @@ html{
 
 body{
     color: #121212;
-    font-size: 1.2rem;
+    font-size: 0.9rem;
     line-height: 1.7;
 }
 
@@ -27,6 +27,16 @@ list{
     line-height: 1px;
 }
 
+
+.site-title a{
+    display: block;
+}
+
+.fadein{
+ opacity: 0;
+ transform: translateY(20px);
+ transition: all 1s;
+}
 
 /*ハンバーガーメニューの設定*/
 #nav{
@@ -74,7 +84,7 @@ list{
 }
 
 #nav .nav-sns li{
-    padding: 5px;
+    padding: 5px 0;
 }
 
 .toggle-btn{
