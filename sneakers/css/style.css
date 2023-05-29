@@ -1,26 +1,26 @@
 @charset "utf-8";
 
 html{
-    font-size: 100%;
+    font-size: 100%; /*全体のフォントサイズ*/
 }
 
 body{
     color: #121212;
     font-size: 0.9rem;
-    line-height: 1.7;
+    line-height: 1.7; /*行の高さ*/
 }
 
 a{
     color: #121212;
-    text-decoration: none;
+    text-decoration: none; /*リンクに下線、色を付けない*/
 }
 
 img{
-    max-width: 100%;
+    max-width: 100%; /*画像は横幅いっぱい*/
 }
 
 li{
-    list-style: none;
+    list-style: none; /*リストの先頭は何もつけない*/
 }
 
 .site-title{
@@ -29,7 +29,7 @@ li{
 
 
 .site-title a{
-    display: block;
+    display: block; /*ブロック全体がリンク*/
 }
 
 .sec-title{
@@ -39,9 +39,9 @@ li{
 }
 
 .fadein{
- opacity: 0;
- transform: translateY(20px);
- transition: all 1s;
+ opacity: 0; /*不透明度（０は透明、１は不透明）*/
+ transform: translateY(20px); /*要素をY軸方向に20px移動するアニメーション*/
+ transition: all 1s; /*アニメーションの速度定義*/
 }
 
 #header{
@@ -49,8 +49,8 @@ li{
     display: flex;
     justify-content: space-between;
     padding: 20px 40px;
-    position: fixed;
-    z-index: 10;
+    position: fixed;　/*スクロールしても位置が変わらない*/
+    z-index: 10; /*重なる要素の順番を指定（値が大きいほど上に配置される）*/
     background-color: #fff;
 }
 
@@ -65,9 +65,9 @@ li{
     color: #fff;
     padding: 60px 25px;
     background-color: #121212;
-    overflow-x: hidden;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
+    overflow-x: hidden; /*横方向にはみ出た部分の処理（表示しない）*/
+    overflow-y: auto; /*縦方向にはみ出た部分の処理（ブラウザにゆだねる※スクロール）*/
+    /*-webkit-overflow-scrolling: touch;*/
     transition: all .5s;
     z-index: 20;
     opacity: 0;
@@ -111,7 +111,7 @@ li{
     width: 30px;
     height: 30px;
     transition: all .5s;
-    cursor: pointer;
+    cursor: pointer; /*カーソルの表示を変える（指さし）*/
     z-index: 20;
 }
 
@@ -126,6 +126,9 @@ li{
     transition: all .5s;
 }
 
+
+/*擬似クラス（何番目の子要素にだけスタイルが適用できる*/
+
 .toggle-btn span:nth-child(1){
     top: 4px;
 }
@@ -137,6 +140,8 @@ li{
 .toggle-btn span:nth-child(3){
     bottom: 4px;
 }
+
+
 
 .open .toggle-btn span{
     background-color: #fff;
@@ -204,8 +209,10 @@ main{
 
 #feature .grid{
     display: grid;
-    gap: 26px;
-    grid-template^columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 26px; /*flexの親要素余白を指定（楯も横も26px）*/
+    /*楯列の幅を変更する*/
+    /*repeatの第一引数に繰り返す回数数、第二引数に繰り返す数値を入れる*/
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 #feature .grid .item{
@@ -214,7 +221,7 @@ main{
 }
 
 #feature .grid img{
-    vertical-align: top;
+    vertical-align: top; /*垂直方向の配置（上端にそろえる）*/
 }
 
 #feature .grid .item-content{
@@ -291,6 +298,9 @@ main{
     background-color: #fff;
 }
 
+
+/*footer*/
+
 #footer{
     color: #fff;
     background-color: #121212;
@@ -300,6 +310,7 @@ main{
 }
 
 
+/*レスポンシブ*/
 
 
 @media screen and (max-width: 600px){
@@ -319,7 +330,7 @@ main{
 #bg-video{
     width: 100%;
     height: 100vh;
-    object-fit: cover;
+    object-fit: cover; /*画像の縦横比率を維持しながら、コンテナ全体を覆うように拡大・縮小する*/
 }
 
 #pickup{
@@ -343,7 +354,7 @@ main{
 }
 
 #contact .content{
-    flex-direction: column;
+    flex-direction: column; /*フレックスアイテムの位置指定（ブロック要素と同じ）*/
 }
 
 #contact .contact.info,

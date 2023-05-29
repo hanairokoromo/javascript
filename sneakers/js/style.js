@@ -40,10 +40,18 @@ $(function(){
    
    
    //スムーススクロール
+   
+   //ページリンクのクリックイベント
    $('a[href^="#"]').click(function(){
+       //リンクを取得(attrで)
        let href = $(this).attr("href");
+       //ジャンプ先のid名をセット
        let target = $(href == "#" || href == "" ? 'html' : href);
+       //トップからジャンプ先の要素までの距離を取得(offset関数、topはY軸)
        let position = target.offset().top;
+       //animateでスムーススクロールを行う
+       //600はスクロール速度で単位はミリ秒
+       //swing:最初と最後はゆっくり、途中は早く
        $("html, body").animate({scrollTop:position}, 600, "swing");
        return false;
    });
